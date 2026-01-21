@@ -1,4 +1,5 @@
 python-dotenv
 pandas
 numpy
+pymongo[srv]==3.11
 pymongo

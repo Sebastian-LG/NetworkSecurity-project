@@ -1,12 +1,5 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: NetworkSecurity
 Version: 0.0.1
 Author: Sebastian Leon
 Author-email: joan2613@gmail.com
-Requires-Dist: python-dotenv
-Requires-Dist: pandas
-Requires-Dist: numpy
-Requires-Dist: pymongo
-Dynamic: author
-Dynamic: author-email
-Dynamic: requires-dist
