@@ -17,3 +17,24 @@ def read_yaml_file(file_path:str) -> dict:
     
     except Exception as e:
         raise NetworkSecurityException(e,sys)
+    
+
+def save_numpy_array_data(filepath:str,array: np.array):
+    try:
+        dir_path = os.path.dirname(filepath)
+        os.makedirs(dir_path,exist_ok=True)
+        with open(filepath, "wb") as file_obj:
+            np.save(file_obj,array)
+    
+    except Exception as e:
+        raise NetworkSecurityException(e,sys) from e
+    
+def save_object(filepath:str,obj:object)->None:
+    try:
+        logging.info("Entered the save object method of mainutils class")
+        os.makedirs(os.path.dirname(filepath),exist_ok=True)
+        with open(filepath,"wb") as file_obj:
+            pickle.dump(obj,file_obj)
+        logging.info("Exited the save object method of main utils class")
+    except Exception as e:
+        raise NetworkSecurityException(e,sys)
